@@ -2,12 +2,11 @@ FROM drupal:7.41
 
 MAINTAINER Dmitry Tokarev <dmitry.tokarev@lucidworks.com>
 
-EXPOSE 80
-
 
 #    ===================================================================
 #    The following setup was done on OS X 10.11.2
 #    docker-machine start default
+#    eval "$(docker-machine env default)"
 #    docker run --name mydrupal -p 8080:80 -d drupal:7.41
 #    go to http://192.168.99.100:8080/install.php
 #    Choose Standard >> Save and Continue
@@ -51,12 +50,11 @@ EXPOSE 80
 #
 #    Click on Configure under Services on http://192.168.99.100:8080/admin/modules page
 #    Click on Add:
-#
-#    Machine-readable name of the endpoint: rest
-#    Server: REST
-#    Path to endpoint: rest
-#    Debug Mode Enabled: Checked
-#    Session authentication: checked
+#        Machine-readable name of the endpoint: rest
+#        Server: REST
+#        Path to endpoint: rest
+#        Debug Mode Enabled: Checked
+#        Session authentication: checked
 #    Save
 #
 #    On page http://192.168.99.100:8080/admin/structure/services click on Edit Resources
