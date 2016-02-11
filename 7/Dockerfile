@@ -4,10 +4,12 @@ MAINTAINER Dmitry Tokarev <dmitry.tokarev@lucidworks.com>
 
 
 #    ===================================================================
-#    The following setup was done on OS X 10.11.2
-#    docker-machine start default
-#    eval "$(docker-machine env default)"
-#    docker run --name mydrupal -p 8080:80 -d drupal:7.41
+#    The following setup was done on OS X 10.11.2:
+
+#    $ docker-machine start default
+#    $ eval "$(docker-machine env default)"
+#    $ docker run --name mydrupal -p 8080:80 -d drupal:7.41
+
 #    go to http://192.168.99.100:8080/install.php
 #    Choose Standard >> Save and Continue
 #    English >> Save and Continue
@@ -77,7 +79,7 @@ MAINTAINER Dmitry Tokarev <dmitry.tokarev@lucidworks.com>
 #    Test if setup was successful: go to http://192.168.99.100:8080/rest
 #    ===================================================================
 #    Commit changes:
-#    [fusion-2.2.0]: docker ps -a
+#    $ docker ps -a
 #    CONTAINER ID        IMAGE               COMMAND                CREATED             STATUS              PORTS                  NAMES
 #    1c38341528dd        drupal:7.41         "apache2-foreground"   2 hours ago         Up About an hour    0.0.0.0:8080->80/tcp   mydrupal
-#    [fusion-2.2.0]: docker commit 1c38341528dd drupal:drupal7_rest
+#    $ docker commit 1c38341528dd drupal:drupal7_rest
